@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>チャット</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="chat-app">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>チャット</h2>
+                <div class="user-profile">
+                    <div class="avatar" id="user-avatar">U</div>
+                    <div class="user-info">
+                        <span id="username-display">ゲスト</span>
+                        <span class="status online">オンライン</span>
+                    </div>
+                </div>
+            </div>
+            <div class="online-users">
+                <h3>オンラインユーザー (<span id="online-count">0</span>)</h3>
+                <div class="user-list" id="user-list">
+                    <!-- オンラインユーザーがここに表示されます -->
+                </div>
+            </div>
+        </div>
+        <div class="chat-container">
+            <div class="chat-header">
+                <h2 id="chat-title">グローバルチャット</h2>
+                <div class="chat-info">
+                    <span id="typing-indicator"></span>
+                </div>
+            </div>
+            <div class="messages" id="messages">
+                <!-- メッセージがここに表示されます -->
+            </div>
+            <div class="message-input">
+                <input type="text" id="message-input" placeholder="メッセージを入力..." autocomplete="off">
+                <button id="send-button">
+                    <i class="material-icons">send</i>
+                </button>
+            </div>
+        </div>
+        <div class="user-modal" id="user-modal">
+            <div class="modal-content">
+                <h2>プロフィール設定</h2>
+                <div class="form-group">
+                    <label for="username-input">ユーザー名</label>
+                    <input type="text" id="username-input" placeholder="あなたの名前">
+                </div>
+                <div class="form-group">
+                    <label for="avatar-color">アバターカラー</label>
+                    <select id="avatar-color">
+                        <option value="#4a76a8">ブルー</option>
+                        <option value="#e91e63">ピンク</option>
+                        <option value="#8bc34a">グリーン</option>
+                        <option value="#ff9800">オレンジ</option>
+                        <option value="#9c27b0">パープル</option>
+                    </select>
+                </div>
+                <button id="save-profile">保存</button>
+            </div>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
